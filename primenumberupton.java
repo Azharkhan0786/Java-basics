@@ -1,26 +1,26 @@
 import java.util.Scanner;
 
 public class primenumberupton {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("NUmber of times you want to check");
-        int t = sc.nextInt();
 
-        for (int i = 0; i < t; i++) {
-            int n = sc.nextInt();
+        System.out.print("Enter the value of n: ");
+        int n = sc.nextInt();
 
-            int count = 0;
-            for (int div = 1; div <= n; div++) {
-                if (n % div == 0) {
-                    count++;
+        System.out.println("Prime numbers up to " + n + " are:");
 
+        for (int i = 2; i <= n; i++) {
+            boolean isPrime = true;
+
+            for (int j = 2; j * j <= i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
                 }
             }
-            if (count == 2) {
-                System.out.println("prime number");
-            } else {
-                System.out.println("not a prime number");
+
+            if (isPrime) {
+                System.out.print(i + " ");
             }
         }
     }

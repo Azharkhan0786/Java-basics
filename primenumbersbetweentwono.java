@@ -9,7 +9,7 @@ public class primenumbersbetweentwono {
         System.out.println("enter the highest number");
         int high = sc.nextInt();
         if(low==1){
-            System.out.println("not a prime not a composite number");
+            System.out.println("Neither a prime nor a composite number");
         }
 
         for (int n = low; n <= high; n++) {
